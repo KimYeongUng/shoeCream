@@ -6,12 +6,14 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "USERS")
 @Getter
+@NoArgsConstructor
 public class User {
 
     @Builder
@@ -41,9 +43,4 @@ public class User {
 
     @Column(name = "MODIFIED_DT")
     private LocalDateTime modifiedDt;
-
-
-    public User() {
-
-    }
 }

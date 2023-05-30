@@ -34,4 +34,10 @@ public class DataAccessTest {
         Assertions.assertNotNull(repository);
         Assertions.assertEquals(user.getId(),"testId01");
     }
+
+    @Test
+    public void save(){
+        User saveUsr = repository.save(user);
+        Assertions.assertNotNull(saveUsr);
+    }
 }
