@@ -21,6 +21,10 @@ public class UserController {
     public User createUser(@RequestBody User vo) {
         log.info("User Register");
         return service.create(vo);
+    }
+
+    @GetMapping("/user/login")
+    public void login(){
 
     }
 }
